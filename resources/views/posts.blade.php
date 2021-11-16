@@ -9,7 +9,7 @@
 <body>
 <div class="content">
 <?php
-echo 'В табилце '.$count .'постов'.'из которых без картинки:'. $notImage;
+echo 'В табилце ';
 ?>
 <h1>Посты</h1>
 <div class="posts">

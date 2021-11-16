@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Support\Facades\DB;
+use App\Models\Post;
 use Illuminate\Database\Seeder;
-use \App\Models\Post;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class PostSeeder extends Seeder
 {
@@ -16,8 +16,6 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        if(Post::count()==0)
-        {
                 Post::create(
                     [
                         'title'=>'Статья о котиках',
@@ -34,7 +32,7 @@ class PostSeeder extends Seeder
                             'content' => 'собачки - это собаки, а собаки это собаки'
                         ]
                         );
-                        Post::create(
+                        \App\Models\Post::create(
                             [
                                 'title'=>'А это статья о поросятах',
                                 'description' => 'Единственная и неповторимая статья',
@@ -42,6 +40,7 @@ class PostSeeder extends Seeder
                                 'content' => 'Поросята с хрюнделями'
                             ]
                             );
-    }
+                            
+
 }
 }

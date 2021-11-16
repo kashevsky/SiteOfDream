@@ -9,11 +9,10 @@ class PostController extends Controller
 {
     public function index()
     {
+        $post = Post::find(1);
         $posts = Post::all();
-        $first = Post::first();
-        $count = \Illuminate\Support\Facades\DB::table('posts')->count();
-        $notImage = \Illuminate\Support\Facades\DB::table('posts')->whereNull('image')->count();
-        return view('posts',compact('posts','count','notImage','first'));
+        $notImage = Post::whereNull('image')->count();
+        return view('posts',compact('posts','post'));
 
     }
 }
