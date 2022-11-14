@@ -16,6 +16,7 @@ class RouteServiceProvider extends ServiceProvider
      * Typically, users are redirected here after authentication.
      *
      * @var string
+       protected $namespace = 'App\\http\\controllers';
      */
     public const HOME = '/home';
 
