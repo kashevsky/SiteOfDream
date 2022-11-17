@@ -8,13 +8,8 @@
 </head>
 <body>
 <div class="content">
-<?php
-echo 'В табилце ';
-?>
 <h1>Посты</h1>
 <div class="posts">
-
-
 @foreach ($posts as $post)
 <div class="post">
 <h2>{{$post->title}}</h2>

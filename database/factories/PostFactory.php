@@ -21,10 +21,9 @@ class PostFactory extends Factory
     {
         return [
             'title' => fake()->title(),
-            'image' => fake()->image(),
+            'image' => fake()->imageUrl(480, 720, 'animals', true),
             'content' => fake()->text(),
         ];
-        dd('cccc');
     }
 
     /**

@@ -9,10 +9,8 @@ class PostController extends Controller
 {
     public function index()
     {
-        $post = Post::find(1);
         $posts = Post::all();
-        $notImage = Post::whereNull('image')->count();
-        return view('posts',compact('posts','post'));
+        return view('posts',compact('posts'));
 
     }
 }
